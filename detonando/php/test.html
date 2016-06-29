@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+textarea{
+	width:90%;
+	min-height: 150px;
+}
+input {
+	display: block;
+}
+</style>
+</head>
+<body>
+
+<form action="." method="post" enctype="multipart/form-data">
+
+	<select id='op' name='op'>
+		<option value='usuario'>Consultar datos usuario</option>
+		<option value='saldo'>Consultar saldo</option>
+		<option value='pago'>Realizar un pago</option>
+		<option value='operaciones'>Consultar operaciones del usuario</option>
+	</select>
+	<input type="file" name="pic" accept="image/*">
+	<textarea rows="" cols="" id='data' name='data'>
+		{
+			"kiosco"		: {"id" : "00001", "key" : "00001" },
+			"usuario"		: {"id" : "00001", "password":"oescamil"},
+			"emisor"		: {"id" : "00001", "password":"oescamil"},
+			"receptor"		: {"id"	: "00002", "password":"oescamil"},
+			"transaccion"	: {"monto" : "500", "concepto" : "Servicios"},
+			"periodo"  		: {"ini" : "29/06/2016", "end" : "30/06/2016"}
+		}
+	</textarea>
+	<input type="submit">
+</form>
+</body>
+</html>
